@@ -20,11 +20,48 @@ class WordCountBar{
         statusBar = NSStatusBar.init()
         statusItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         text = withText
+        
         updateCount()
+        
+        //Set status image
         if let statusBarButton = statusItem.button{
             statusBarButton.image = NSImage(systemSymbolName: "pencil.and.outline", accessibilityDescription: nil)
             statusBarButton.imagePosition = NSControl.ImagePosition.imageLeft
         }
+        
+        //Set up menu
+        let mainMenu = NSMenu()
+        
+        let charToggle = NSMenuItem()
+        charToggle.title = "Show Character Count"
+        charToggle.state = NSControl.StateValue.on
+        charToggle.target = self
+        charToggle.action = #selector(WordCountBar.toggleCharCount)
+        
+        let quitButton = NSMenuItem()
+        quitButton.title = "Quit"
+        quitButton.target = self
+        quitButton.action = #selector(WordCountBar.quitOut)
+        quitButton.keyEquivalent = "q"
+        
+        mainMenu.addItem(charToggle)
+        mainMenu.addItem(quitButton)
+        statusItem.menu = mainMenu
+    }
+    
+    @objc func quitOut(){
+        NSApplication.shared.terminate(nil)
+    }
+    
+    @objc func toggleCharCount(_ sender: NSMenuItem){
+        if(sender.state == NSControl.StateValue.on){
+            sender.state = NSControl.StateValue.off
+        }else{
+            sender.state = NSControl.StateValue.on
+        }
+        
+        showCharCount = !showCharCount
+        updateCount()
     }
     
     func updateCount(){
