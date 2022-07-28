@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		461BC5032892716900EFE8D5 /* WordCountBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BC5022892716900EFE8D5 /* WordCountBar.swift */; };
 		46CD48A42891EBBB00DA8BB1 /* CountBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD48A32891EBBB00DA8BB1 /* CountBarApp.swift */; };
 		46CD48A62891EBBB00DA8BB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD48A52891EBBB00DA8BB1 /* ContentView.swift */; };
 		46CD48A82891EBBE00DA8BB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46CD48A72891EBBE00DA8BB1 /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		46CD48B62891EBBE00DA8BB1 /* CountBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD48B52891EBBE00DA8BB1 /* CountBarTests.swift */; };
 		46CD48C02891EBBE00DA8BB1 /* CountBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD48BF2891EBBE00DA8BB1 /* CountBarUITests.swift */; };
 		46CD48C22891EBBE00DA8BB1 /* CountBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD48C12891EBBE00DA8BB1 /* CountBarUITestsLaunchTests.swift */; };
-		46CD48D22891FA8200DA8BB1 /* WordCountBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CD48D12891FA8200DA8BB1 /* WordCountBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		461BC5022892716900EFE8D5 /* WordCountBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountBar.swift; sourceTree = "<group>"; };
 		46CD48A02891EBBB00DA8BB1 /* CountBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CD48A32891EBBB00DA8BB1 /* CountBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountBarApp.swift; sourceTree = "<group>"; };
 		46CD48A52891EBBB00DA8BB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		46CD48BF2891EBBE00DA8BB1 /* CountBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountBarUITests.swift; sourceTree = "<group>"; };
 		46CD48C12891EBBE00DA8BB1 /* CountBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		46CD48D02891F9BB00DA8BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		46CD48D12891FA8200DA8BB1 /* WordCountBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WordCountBar.swift; path = ../../../../.Trash/WordCountBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +102,8 @@
 				46CD48A32891EBBB00DA8BB1 /* CountBarApp.swift */,
 				46CD48A52891EBBB00DA8BB1 /* ContentView.swift */,
 				46CD48A72891EBBE00DA8BB1 /* Assets.xcassets */,
-				46CD48D12891FA8200DA8BB1 /* WordCountBar.swift */,
 				46CD48AC2891EBBE00DA8BB1 /* CountBar.entitlements */,
+				461BC5022892716900EFE8D5 /* WordCountBar.swift */,
 				46CD48A92891EBBE00DA8BB1 /* Preview Content */,
 			);
 			path = CountBar;
@@ -265,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CD48A62891EBBB00DA8BB1 /* ContentView.swift in Sources */,
-				46CD48D22891FA8200DA8BB1 /* WordCountBar.swift in Sources */,
+				461BC5032892716900EFE8D5 /* WordCountBar.swift in Sources */,
 				46CD48A42891EBBB00DA8BB1 /* CountBarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
