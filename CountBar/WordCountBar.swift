@@ -24,7 +24,7 @@ class WordCountBar{
         updateCount()
         
         //Set status image
-        if let statusBarButton = statusItem.button{
+        if let statusBarButton = statusItem.button {
             statusBarButton.image = NSImage(systemSymbolName: "pencil.and.outline", accessibilityDescription: nil)
             statusBarButton.imagePosition = NSControl.ImagePosition.imageLeft
         }
@@ -49,14 +49,14 @@ class WordCountBar{
         statusItem.menu = mainMenu
     }
     
-    @objc func quitOut(){
+    @objc func quitOut() {
         NSApplication.shared.terminate(nil)
     }
     
-    @objc func toggleCharCount(_ sender: NSMenuItem){
-        if(sender.state == NSControl.StateValue.on){
+    @objc func toggleCharCount(_ sender: NSMenuItem) {
+        if (sender.state == NSControl.StateValue.on) {
             sender.state = NSControl.StateValue.off
-        }else{
+        } else {
             sender.state = NSControl.StateValue.on
         }
         
@@ -64,18 +64,18 @@ class WordCountBar{
         updateCount()
     }
     
-    func updateCount(){
+    func updateCount() {
         //Counts words and updates status bar display
         countWords()
-        if let statusBarButton = statusItem.button{
-            let title = String(wordCount)+(showCharCount ? " / "+String(charCount):"")
+        if let statusBarButton = statusItem.button {
+            let title = String(wordCount) + (showCharCount ? " / " + String(charCount) : "")
             statusBarButton.title = title
         }
     }
     
-    func countWords(){
+    func countWords() {
         //Yucky one-liner; splits on spaces and newlines, removes empty "words", and counts
-        wordCount = text.components(separatedBy: .whitespacesAndNewlines).filter{!$0.isEmpty }.count
+        wordCount = text.components(separatedBy: .whitespacesAndNewlines).filter{ !$0.isEmpty }.count
         
         //Removes newlines and counts remaining characters
         charCount = text.components(separatedBy: .newlines).joined().count
